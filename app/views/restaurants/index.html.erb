@@ -1,0 +1,15 @@
+<div class="container p-4">
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <%= link_to "all restaurants", restaurants_path, class: "btn btn-primary" %>
+    </form>
+  </nav>
+</div>
+<div class="container p-4"> <!-- Add container with padding -->
+  <ol>
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <% end %>
+    <%= link_to "add new restaurant", new_restaurant_path, class:"btn btn-primary" %>
+  </ol>
+</div>

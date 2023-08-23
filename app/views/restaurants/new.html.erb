@@ -1,0 +1,14 @@
+<div class="container p-4">
+<nav class="navbar navbar-light bg-light">
+ <form class="form-inline">
+ <%= link_to "all restaurats", restaurants_path, class: "btn btn-primary" %>
+ </form>
+ </div>
+<%= simple_form_for [@restaurant] do |f| %>
+  <!-- [...] -->
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category %>
+  <%= f.input :phone_numer %>
+ <%= f.submit%>
+<% end %>
